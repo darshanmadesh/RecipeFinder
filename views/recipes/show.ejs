@@ -1,11 +1,27 @@
 <% layout('layouts/boilerplate') %>
-<h1><%= recipe.name %></h1>
-<footer>
-    <a href="/recipes/<%= recipe._id %>/edit">Edit recipe</a>
-    <br />
-    <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
-        <button>Delete Recipe</button>
-    </form>
-    <br />
-    <a href="/recipes">All recipes</a>
-</footer>
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card mb-5">
+            <img src="<%= recipe.image %>" class="card-img-top" alt="<%= recipe.name %>" />
+            <div class="card-body">
+                <h3 class="card-title"><%= recipe.name %></h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Total Time : <%= recipe.totalTime %></li>
+                    <li class="list-group-item">Prep Time : <%= recipe.prepTime %></li>
+                    <li class="list-group-item">Cook Time : <%= recipe.cookTime %></li>
+                    <li class="list-group-item">Yields : <%= recipe.yields %></li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <h4>Instructions:</h4>
+                <p><%= recipe.instructions %></p>
+            </div>
+            <div class="card-body">
+                <a href="/recipes/<%= recipe._id %>/edit" class="card-link btn btn-info">Edit recipe</a>
+                <form class="d-inline" action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete Recipe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

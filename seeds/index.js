@@ -24,7 +24,7 @@ const seedDB = async () => {
             instructions: RecipeData[i].Instructions,
             ingredients: RecipeData[i].Ingredients,
             cookTime: RecipeData[i].CookTime,
-            preptTime: RecipeData[i].PrepTime,
+            prepTime: RecipeData[i].PrepTime,
             totalTime: RecipeData[i].TotalTime,
             review: RecipeData[i].Review,
             reviewNum: RecipeData[i].ReviewNum,
