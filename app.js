@@ -3,6 +3,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const Recipe = require("./models/recipe");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 
 //connect DB
 mongoose.connect("mongodb://localhost:27017/finalProject", {
@@ -23,6 +24,7 @@ const app = express();
 //view engine : ejs
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.engine("ejs", ejsMate);
 
 //middleware
 app.use(express.urlencoded({ extended: true }));

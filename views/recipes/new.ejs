@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Add Recipe</title>
-    </head>
-    <body>
+<% layout('layouts/boilerplate') %>
         <form action="/recipes" method="POST">
             <div>
                 <label for="name">Name</label>
@@ -14,6 +7,10 @@
             <div>
                 <label for="instructions">Instructions</label>
                 <input type="text" id="instructions" name="recipe[instructions]" />
+            </div>
+            <div>
+                <label for="instructions">Image URL</label>
+                <input type="text" id="image" name="recipe[image]" />
             </div>
             <div>
                 <label for="name">Cook Time</label>
@@ -33,5 +30,3 @@
         <div>
             <a href="/recipes">Back to All Recipes</a>
         </div>
-    </body>
-</html>

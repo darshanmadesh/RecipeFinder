@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Edit Recipe</title>
-    </head>
-    <body>
+<% layout('layouts/boilerplate') %>
+        <h1>EDIT RECIPE</h1>
         <form action="/recipes/<%= recipe._id %>?_method=PUT " method="POST">
             <div>
                 <label for="name">Name</label>
@@ -33,5 +27,4 @@
         <div>
             <a href="/recipes/<%= recipe._id %> ">Back to Recipe</a>
         </div>
-    </body>
-</html>
+
