@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recipes</title>
+    </head>
+    <body>
+        <h1>ALL Recipes</h1>
+        <div>
+            <a href="/recipes/new">Add Recipe</a>
+        </div>
+        <ul>
+            <% for (let recipe of recipes) { %>
+            <li><a href="/recipes/<%= recipe._id %>"><%= recipe.name %></a></li>
+            <% } %>
+        </ul>
+    </body>
+</html>

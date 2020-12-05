@@ -36,6 +36,6 @@ const seedDB = async () => {
     }
 };
 
-//console.log(typeof RecipeData[20].Type);
-
-seedDB();
+seedDB().then(() => {
+    mongoose.connection.close();
+});
